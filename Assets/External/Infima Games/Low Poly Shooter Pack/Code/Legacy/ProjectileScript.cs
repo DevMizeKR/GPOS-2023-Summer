@@ -73,9 +73,9 @@ namespace InfimaGames.LowPolyShooterPack.Legacy
 		private void FixedUpdate()
 		{
 			//Rotates the projectile according to the direction it is going
-			if (GetComponent<Rigidbody>().velocity != Vector3.zero)
+			if (GetComponent<Rigidbody>().linearVelocity != Vector3.zero)
 				GetComponent<Rigidbody>().rotation =
-					Quaternion.LookRotation(GetComponent<Rigidbody>().velocity);
+					Quaternion.LookRotation(GetComponent<Rigidbody>().linearVelocity);
 
 			//If using constant force
 			if (useConstantForce == true && !hasStartedExplode)

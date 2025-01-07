@@ -451,7 +451,7 @@ namespace InfimaGames.LowPolyShooterPack
                 //Spawn projectile from the projectile spawn point.
                 GameObject projectile = Instantiate(prefabProjectile, playerCamera.position, Quaternion.Euler(playerCamera.eulerAngles + spreadValue));
                 //Add velocity to the projectile.
-                projectile.GetComponent<Rigidbody>().velocity = projectile.transform.forward * projectileImpulse;
+                projectile.GetComponent<Rigidbody>().linearVelocity = projectile.transform.forward * projectileImpulse;
             }
         }
 

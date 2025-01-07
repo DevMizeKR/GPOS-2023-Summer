@@ -44,7 +44,7 @@ namespace InfimaGames.LowPolyShooterPack.Legacy
 
         private void Update()
         {
-			rb.velocity = transform.forward * 10000;
+			rb.linearVelocity = transform.forward * 10000;
 			// Debug.Log(transform.rotation.eulerAngles);
         }
 
